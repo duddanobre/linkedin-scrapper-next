@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from "react";
 import LocationAutocomplete from "../utils/locationAutoComplete";
 
 type SearchFormProps = {
