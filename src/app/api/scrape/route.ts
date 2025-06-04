@@ -11,7 +11,7 @@ function buildSearchUrl(keywords: string, location: string, start = 0) {
 }
 
 async function scrapeJobs(keywords: string, location: string, pages = 2) {
-  let allJobs: any[] = [];
+  const allJobs: unknown[] = [];
 
   for (let i = 0; i < pages; i++) {
     const start = i * 25;
@@ -35,7 +35,7 @@ async function scrapeJobs(keywords: string, location: string, pages = 2) {
         }
       });
     } catch (error) {
-      console.error(`Erro ao buscar página ${i + 1}:`, (error as any).message);
+      console.error(`Erro ao buscar página ${i + 1}:`, (error as Error).message);
     }
   }
 
